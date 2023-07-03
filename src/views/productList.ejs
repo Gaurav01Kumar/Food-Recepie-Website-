@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Product List</title>
+        <link rel="stylesheet" href="/productList.css">
+    </head>
+    <body>
+        <!-- including header from header file ejs -->
+        <%-include("header")  %> 
+        <!-- code for our product list  -->
+        <section id="productList">
+          <div class="leftmenu">
+               <h2>Filter</h2>
+          </div>
+          <div class="rightMenu">
+             <h3>Food Category name</h3>
+             <div class="productList_wrapper">
+                <% for(let i=0;i<productList.length;i++) {%> 
+                  
+
+                <div class="product_item">
+                     <a href="/food-details?name=<%=productList[i].name  %>&price=<%=productList[i].price  %>">  <img src="<%=productList[i].image%>" alt="" height="100"></a>
+                      <div class="product_details">
+                        <p><%=productList[i].name %> </p>
+                        <button >4.5 </button>
+                        <span>Price:<%=productList[i].price %> </span>
+                      </div>
+                </div>
+               <% } %> 
+             </div>
+          </div>
+        </section>
+        <%-include("footer")  -%> 
+    </body>
+</html>

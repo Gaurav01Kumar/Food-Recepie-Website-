@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="/Category.css">
+</head>
+
+<body>
+    <!-- including header using ejs -->
+    <%- include("header") -%>
+        <!-- Coding for category section -->
+        <section id="Category">
+            <div class="category_banner_wrapper">
+                <div class="banner_wrapper">
+                    <div class="banner_title">
+                        <h1><b>The Bests Product </b> <br>in Every Category</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quod quae id
+                            consectetur rerum? Est, debitis. Asperiores ab esse nulla atque dolore? Quo voluptatum
+                            corrupti id, veniam deleniti deserunt quas?</p>
+                    </div>
+                    <div class="image_box">
+                        <img src="Image/chef 1.png" alt="" height="300">
+                    </div>
+                </div>
+            </div>
+            <div class="category_wrapper">
+                <h1>Choose A <b style="color: rgb(236, 4, 4);">Category</b> </h1>
+                
+                <div class="category_box">
+                    <% for(let i=0;i<categoryList.length;i++) {%> 
+                    <div class="category">
+                            
+                       <a href="/productList?name=<%=categoryList[0].name%>"><img src="<%=categoryList[i].image %>" alt="" height="140" ></a> 
+                        <div class="details">
+                            <h3><%=categoryList[i].name %></h3>
+                            <span>Starting at :<%=categoryList[i].price %></span>
+
+                        </div>
+                    </div>
+                <% } %> 
+                </div>
+
+            </div>
+        </section>
+        <%-include("footer") -%>
+</body>
+
+</html>

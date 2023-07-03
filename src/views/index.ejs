@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Site</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .box{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include("header",{logo}) %> 
+    
+    <section id="Title">
+      <img src="Image/Image2.jpg" alt="" />
+      <div class="content">
+        <h2>Today Selection</h2>
+        <p>Try our New selction Food</p>
+      </div>
+    </section>
+    <section id="Items_secton1">
+      <h1>Top Selling product</h1>
+      
+      <div class="item_category">
+        <!-- <div class="catehory1">
+
+          <div class="healthyfood">
+            <img src="Image/Image4.jpg" alt="Healthy food Image" />
+          </div>
+          <div class="fooddetails">
+            <h3>Fresh Fruit</h3>
+            <p>
+              Indian Food <br />
+              Patna
+            </p>
+          </div>
+        </div>
+        <div class="catehory1">
+          <div class="fastfood">
+            <img src="Image/Image7.jpg" alt="Fast Food Image " />
+          </div>
+          <div class="fooddetails">
+            <h3>Pizza</h3>
+            <p>Fast Food ,India</p>
+          </div>
+        </div>
+        <div class="catehory1">
+          <div class="Non_Veg">
+            <a href="$">
+              <img src="Image/Image5.jpg" alt="Fast Food Image "
+            /></a>
+          </div>
+          <div class="fooddetails">
+            <h3>Meat</h3>
+            <p>Non Veg Food ,India</p>
+          </div>
+        </div>
+        <div class="catehory1">
+          <div class="Veg_food">
+            <img src="Image/Image10.jpg" alt="Fast Food Image " />
+          </div>
+          <div class="fooddetails">
+            <h3>Veg Food</h3>
+            <p>Veg Food Bihar,India</p>
+          </div>
+        </div>
+        <div class="catehory1">
+          <div class="SouthIndian_food">
+            <img src="Image/Image8.jpg" alt="Fast Food Image " />
+          </div>
+          <div class="fooddetails">
+            <h3>Idli Shambar</h3>
+            <p>South Indian Food ,India</p>
+          </div>
+        </div> -->
+        <% for(let i=0;i<topSeller.length;i++ ) { %> 
+          <div class="catehory1">
+
+            <div class="healthyfood">
+           <a href="/productList?name=<%=topSeller[i].name%>">   <img src="<%=topSeller[i].image%>" alt="Healthy food Image" name="iii" /></a>
+            </div>
+            <div class="fooddetails">
+              <h3><%=topSeller[i].name%></h3>
+              <p>
+                Indian Food <br />
+                Patna
+              </p>
+            </div>
+          </div>
+<% } %> 
+      </div>
+    </section>
+    <section id="Hotels_section">
+      <h1>Top Resturant</h1>
+      <div class="hotelbox">
+        <div class="hotel">
+          <img src="Image/hotel1.jpg" alt="" />
+          <div class="hoteldetails">
+            <h2>Resturant 1</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="Image/hotel2.jpg" alt="" />
+          <div class="hoteldetails">
+            <h2>Resturant 2</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="Image/hotel3.jpg" alt="" />
+          <div class="hoteldetails">
+            <h2>Resturant 3</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="Image/hotel4.jpg" alt="" />
+          <div class="hoteldetails">
+            <h2>Resturant 4</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div class="hotel">
+          <img src="Image/hotel5.jpg" alt="" />
+          <div class="hoteldetails">
+            <h2>Resturant 5</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="foodDetail" class="my-5 text-center " >
+      <h1 class="fw-light"><span class="text-danger">Mood</span>For eat!</h1>
+        <div class="conatiner-fluid d-flex justify-content-around p-4">
+          
+          
+            <div class="box p-5 cursor-pointer">
+              <i class="fs-3 p-2 cursor-pointer">😊</i>
+              <p class="fs-4 fw-bold text-success p-2">Smile</p>
+            </div>
+            
+            <div class="box p-5 cursor-pointer">
+              <i class="fs-3 p-2">😢</i>
+              <p class="fs-4 fw-bold text-success p-2">Sad</p>
+            </div>
+              
+            <div class="box p-5 cursor-pointer">
+              <i class="fs-3 p-2">🤣</i>
+              <p class="fs-4 fw-bold text-success p-2">Happy</p>
+            </div>
+              
+            <div class="box p-5 cursor-pointer">
+              <i class="fs-3 p-2">😡</i>
+              <p class="fs-4 fw-bold text-success p-2">Angry</p>
+            </div>
+              
+            <div class="box p-5 cursor-pointer">
+              <i class="fs-3 p-2">😍</i>
+              <p class="fs-4 fw-bold text-success p-2">Romantice</p>
+            </div>
+              
+            <div class="box p-5 cursor-pointer">
+              <i class="fs-3 p-2">😎</i>
+              <p class="fs-4 fw-bold text-success p-2">Cool</p>
+            </div>
+        </div>
+    </section>
+    <section id="ChefSection">
+      <h2>Our Best chef</h2>
+      <div class="chefcontainer">
+        <div class="box1">
+          <div class="chefbox">
+            <div class="chefimage">
+              <img src="Image/chef3.jpg" alt="" />
+            </div>
+            <div class="chefdetails">
+              <h2>Grant Achatz</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorem, mollitia!
+              </p>
+            </div>
+          </div>
+          <div class="chefbox">
+            <div class="chefimage">
+              <img src="Image/chef4.png" alt="" />
+            </div>
+            <div class="chefdetails">
+              <h2>Mario Batali</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque,
+                est.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="chefbox">
+            <div class="chefimage">
+              <img src="Image/chef2.jpg" alt="Chef Image" />
+            </div>
+            <div class="chefdetails">
+              <h2>Paul Bocuse</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dolore, adipisci!
+              </p>
+            </div>
+          </div>
+          <div class="chefbox">
+            <div class="chefimage">
+              <img src="Image/chef 1.png" alt="" />
+            </div>
+            <div class="chefdetails">
+              <h2>Marie-Antoine</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis, ducimus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- including footer  -->
+   <%- include("footer") -%> 
+  </body>
+</html>

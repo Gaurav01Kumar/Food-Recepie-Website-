@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<html>
+  <body>
+    <header>
+      <div class="heading">
+        <img src="Image/logo1.png" alt="" id="menu-btn" />
+        <h1>Food court</h1>
+      </div>
+      <div class="navigation">
+        <input type="search" placeholder="search for food" />
+        <nav>
+          <a href="/" class="nav1">Home </a>
+          <a href="/category" class="nav1">Category </a>
+          <!-- <a href="#" class="nav1">Favoirate</a> -->
+          <a href="/food/recipie" class="nav1">Recipe </a>
+          <!-- <a href="#" class="nav1">Mood</a> -->
+          <a href="#" class="nav1">About us</a>
+        </nav>
+        <% if(logo===true){%> 
+          <div class="dropdown">
+
+  <i class="fa fa-user " data-bs-toggle="dropdown"></i>
+
+<ul class="dropdown-menu">
+  <li><a href="/user-profile"><button class="dropdown-item" type="button">Your Profile</button></a></li>
+  <li><button class="dropdown-item" type="button">Order</button></li>
+  <li><button class="dropdown-item" type="button">Wishlist</button></li>
+  <li><button class="dropdown-item" type="button">Setting</button></li>
+
+</ul>
+</div>
+        <%}else{%>
+          <a href="/register" style="text-decoration: none; font-size: 16px; color: black;" >SignUp</a>
+       <% } %> 
+       
+       <a href="/cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></a> 
+      </div>
+
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>

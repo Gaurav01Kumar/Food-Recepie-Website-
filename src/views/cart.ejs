@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+</head>
+
+<body onload="getData()">
+    <%-include("header",{logo}) %>
+
+        <section class="m-5 py-5" >
+            <h1>Your Cart Product</h1>
+              <div class=" m-3">
+                <div class="cart_box shadow d-flex flex-column" style="width: 50rem;">
+                    <div class=" d-flex  p-2 ">
+                        <img class="" src="Image/Image2.jpg" alt="Card image cap" width="250px" height="150">
+                          <div class="card-body mx-5" style="width: 25rem;">
+                             <h3 id="foodName">Food Name</h3>
+                              <div class="priceBox mt-3">
+                                 <button class="btn bg-success text-light fw-bold   mx-4"> 4.5 <i class="fa fa-star "
+                                         style="color: yellow;"></i> </button>
+                                  <p class="mx-4 fw-bold fs-4 mt-4"> <mark>&#8377 99.</mark> <del
+                                         class="text-danger text-line">20% Off</del>
+                                   </p>
+                                 <p class="mx-4">Delevired by 24hours</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="someBtn ">
+                        <button class="btn btn-light text-dark shadow m-3 "><i class="fa fa-trash p-1"><span
+                                    class="px-3">Remove</span></i></button>
+                        <button class="btn btn-light text-dark shadow m-3 mx-4 "><span class="px-3">Buy Now</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            function getData(){
+                let cart=localStorage.getItem("MyProduct");
+                const carts=JSON.parse(cart)
+                const productDetails=[{
+                   name:carts[0].name,
+                   price:carts[0].price,
+                   quanity:carts[0].quanity,
+                }]
+            document.getElementById("foodName").innerHTML=productDetails.name;
+            
+            }
+        </script>
+</body>
+
+</html>

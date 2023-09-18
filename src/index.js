@@ -3,22 +3,24 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const port = process.env.port || 3000;
 //const ejs=require("ejs");
-
+var path=require("path")
 const fs=require("fs")
 const bcrypt = require("bcrypt");
-const Register = require("./model/register");
-const Product = require("./model/Product");
+const Register = require("./server/model/register");
+const Product = require("./server/model/Product");
 const cookieParser = require("cookie-parser");
 const multer=require("multer")
 const cors=require("cors")
 var userExit = false;
-require("./db/connect");
-const auth = require("./middleware/auth");
+require("./server/db/connect");
+const auth = require("./server/middleware/auth");
 const app = express();
+
 app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("client/public"));
+app.set('views',path.join(__dirname,'client/views'))
 app.set("view engine", "ejs");
 app.use(cookieParser());
 //router for home page
@@ -205,6 +207,7 @@ app.get("/food/recipie", (req, res) => {
 
 const jwt = require("jsonwebtoken");
 const { json } = require("body-parser");
+
 
 app.get("/admin", auth, async (req, res) => {
   const token = req.cookies.jwt;

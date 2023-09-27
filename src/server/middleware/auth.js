@@ -1,5 +1,5 @@
 const jwt=require("jsonwebtoken")
- const Register=require("../model/register");
+ const Register=require("../repository/model/user");
 // const auth=async(req,res,next)=>{
 // try{
 // const token=req.cookie.jwt;

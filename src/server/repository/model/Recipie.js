@@ -2,29 +2,20 @@ const mongoose=require("mongoose");
 
 // Schema for product page
 const recipieSchema=new mongoose.Schema({
-    rname:{
+    title:{
         type:String,
         required:true
     },
-   
-    category:{
-        type:String,
-        required:true
-    },
-    mood:{
-        type:String,
-        required:true
-    },
-   
-   
-    description:{
-        type:String,
-        required:true
-    },
-    rating:{
-        type:Number,
-        
-    },
+    description:{type:String},
+    images:[
+        {
+            type:Array
+        }
+    ],
+    createdAt:{type:Date},
+    updatedAt:{type:Date},
+    createdBy:{type:mongoose.Schema.Types.ObjectId,ref:"user"},
+    updatedBy:{type:mongoose.Schema.Types.ObjectId,ref:"user"}
 })
 
 const Recipie=new mongoose.model("recipies", recipieSchema);

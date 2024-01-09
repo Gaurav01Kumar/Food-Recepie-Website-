@@ -36,6 +36,10 @@ const profileSchema = new mongoose.Schema({
       },
     },
   ],
+  createdAt: { type: Date },
+  updatedAt: { type: Date },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
+  updatedBy: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
 });
 
 module.exports = new mongoose.model("profile", profileSchema);

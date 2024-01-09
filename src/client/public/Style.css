@@ -34,7 +34,7 @@ header {
 #title {
   height: 400px;
   width: 100%;
-  background-color: ;
+  
 }
 .navigation {
   width: 100%;
@@ -49,7 +49,7 @@ header {
 }
 nav a:hover {
   color: rgb(0, 128, 122);
-  zoom: 115%;
+  zoom: 105%;
 }
 .navigation > i {
   font-size: 27px;
@@ -81,7 +81,7 @@ nav a:hover {
   top: 80px;
   text-align: center;
   left: 40px;
-  font-size: ;
+  
 }
 .content h2 {
   color: white;
@@ -119,6 +119,7 @@ nav a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   transition: 1s;
+  overflow: hidden;
 }
 .healthyfood {
   height: 250px;
@@ -181,7 +182,8 @@ nav a:hover {
   transition: 0.5s ease;
 }
 .catehory1 :hover {
-  transform: scale(1.1);
+  overflow: hidden;
+  transform: scale(0.8);
 }
 .hotelbox {
   height: 400px;
@@ -445,7 +447,7 @@ margin-left: 20px;
   height: 500px;
   width:26%;
   transform: translate(500px,150px);
-  background:linear-gradient(120deg, , white) ;
+  background:linear-gradient(120deg,  white) ;
   box-shadow: 10px 10px 10px rgb(200, 195, 195), inset -2px 0px 10px black;
   
 }
